@@ -1,0 +1,323 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+* {
+     margin: 0;
+     padding: 0;
+     box-sizing: border-box;
+     font-family: 'Poppins';
+}
+
+body {
+     background-color: #0d6efd;
+}
+
+
+.start_quiz,
+.info_box,
+.quiz_box,
+.result_box {
+     position: absolute;
+     top: 50%;
+     left: 50%;
+     transform: translate(-50%, -50%);
+     box-shadow: 0px 4px 8px 0 rgba(0, 0, 0, 0.2),
+                 0px 6px 20px 0 rgba(0, 0, 0, 0.19);
+     transition: all 0.3s ease;
+}
+
+.good_luck {
+     font-size: 25px;
+     font-weight: 700;
+     color: #0055ff;
+     font-family: 'Ubunto mono';
+}
+
+/* start button */
+
+.start_btn {
+     padding: 2vh 2vw;
+     font-size: 20px;
+     color: #fff;
+     border: 2px solid #fff;
+     background-color: #0d6efd;  
+     border-radius: 3px;   
+}
+
+.start_btn:hover {
+     background-color: #fff;
+     color: #0d6efd;
+     outline: none;
+     border: none;
+     transition: all 0.3s ease;
+}
+
+.info_box.activeinfo,
+.quiz_box.activeQuiz,
+.result_box.activeResult {
+     z-index: 5;
+     opacity: 1;
+     pointer-events: auto;
+     transform: translate(-50%, -50%) scale(1);
+     transition: all 0.3s ease;
+}
+
+/* info box */
+.info_box {
+     background-color: #fff;
+     opacity: 0;
+     pointer-events: none;
+     transform: translate(-50%, -50%) scale(0.9);
+}
+
+.info_head {
+     border-bottom: 2px solid grey;
+     padding: 20px;
+}
+
+.info_head h3 {
+     font-weight: 500;
+}
+
+.info_body {
+     padding: 20px;
+}
+
+.info_body div {
+     line-height: 35px;
+}
+
+.info_btn {
+     display: flex;
+     justify-content: flex-end;
+}
+
+.info_btn button {
+     margin: 10px;
+     padding: 5px 20px;
+     font-size: 16px;
+     border-radius: 5px;
+     cursor: pointer;
+}
+
+ .quit {
+     color: #0d6efd;
+     border: 2px solid #0d6efd;
+}
+
+ .quit:hover {
+     color: #fff;
+     background-color: #0d6efd;
+     transition: all 0.3s ease;
+}
+
+ .continue {
+     background-color: #0d6efd;
+     color: #fff;
+     border: 2px solid #0d6efd;
+}
+
+ .continue:hover {
+     background-color: #055eb8;
+     border: 2px solid #055eb8;
+     transition: all 0.3s ease;
+}
+
+/* quiz box */
+.quiz_box {
+     width: 50%;
+     background-color: #fff;
+     border-radius: 3px;
+     opacity: 0;
+     pointer-events: none;
+     transform: translate(-50%, -50%) scale(0.9);
+}
+
+.quiz_box header {
+     padding: 3%;
+     display: flex;
+     align-items: center;
+     justify-content: space-between;
+     box-shadow: 0px 3px 5px 1px rgba(0, 0, 0, 0.1);
+}
+
+@media (max-width: 930px) {
+     .quiz_box header {
+          display: block;
+     }
+}
+
+.quiz_box header div h4 {
+     font-size: 20px;
+     font-weight: 600;
+}
+
+.quiz_box header .timer {
+     display: flex;
+     justify-content: space-between;
+     align-items: center;
+     width: 130px;
+     height: 45px;
+     background-color: #cce5ff;
+     border-radius: 10px;
+     padding: 0 8px;
+}
+
+.quiz_box header .timer .timer_text {
+     font-weight: 400;
+     font-size: 17px;
+}
+
+.timer .timer_sec {
+     font-size: 18px;
+     font-weight: 500;
+     background-color: #343a40;
+     color: #fff;
+     text-align: center;
+     border-radius: 5px;
+     width: 35px;
+}
+
+.quiz_box section {
+     padding: 25px 30px 20px 30px;
+}
+
+.quiz_box section .que_text {
+     font-size: 25px;
+     font-weight: 600;
+}
+
+.quiz_box section .option_list {
+     padding: 20px 0;
+     display: block;
+}
+
+.quiz_box section .option_list .option {
+     background-color: aliceblue;
+     border: 1px solid #84c5fe;
+     border-radius: 5px;
+     padding: 8px 15px;
+     margin-bottom: 15px;
+     display: flex;
+     align-items: center;
+     justify-content: space-between;
+     cursor: pointer;
+}
+
+.option_list .option:last-child {
+     margin-bottom: 0;
+}
+
+section .option_list .option:hover {
+     color: #004085;
+     background: #cce5ff;
+     border-color: #b8daff;
+     transition: all 0.3s ease;
+}
+
+.option_list .option.correct {
+     color: #155724;
+     background: #d4edda !important;
+     border-color: #c3e6cb !important;
+}
+
+.option_list .option.incorrect {
+     color: #721c24;
+     background: #f8d7da !important;
+     border-color: #f5c6cb !important;
+}
+
+.option_list .option.disabled {
+     pointer-events: none;
+}
+
+.quiz_box footer {
+     width: 100%;
+     padding: 10px 30px;
+     display: flex;
+     justify-content: space-between;
+     align-items: center;
+}
+
+.que_count span {
+     font-weight: 500;
+     padding: 0 5px;
+}
+
+.que_count span:first-child {
+     padding-left: 0;
+}
+
+.quiz_box footer .next_btn {
+     display: none;
+     height: 40px;
+     padding: 0 13px;
+     font-size: 18px;
+     font-weight: 400;
+     border: none;
+     outline: none;
+     color: #fff;
+     background-color: #0d6efd;
+     border-radius: 5px;
+     cursor: pointer;
+     transition: all 0.3s ease;
+}
+
+.quiz_box footer .next_btn:hover {
+     background-color: #0263ca;
+}
+
+/* result box */
+.result_box {
+     background: #fff;
+     width: 450px;
+     padding: 25px 30px;
+     border-radius: 5px;
+     text-align: center;
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     flex-direction: column;
+     opacity: 0;
+     pointer-events: none;
+     transform: translate(-50%, -50%) scale(0.9);
+}
+.result_box .icon {
+     font-size: 100px;
+     color: #0d6efd;
+     margin-bottom: 10px;
+}
+
+.result_box .complete_quiz {
+     font-size: 20px;
+     font-weight: 600;
+}
+
+.result_box .score span {
+     display: flex;
+     margin: 10px 0;
+     font-size: 18px;
+     font-weight: 500;
+}
+
+.score span p {
+     font-weight: 600;
+}
+
+.result_box .buttons {
+     display: flex;
+     margin: 20px 0;
+}
+
+.result_box .buttons button {
+     margin: 0 10px;
+     height: 40px;
+     padding: 0 20px;
+     border: none; 
+     outline: none;
+     font-size: 18px;
+     font-weight: 500;
+     border-radius: 5px;
+     border: 1px solid #0d6efd;
+     cursor: pointer;
+     transition: all 0.3 ease;
+}

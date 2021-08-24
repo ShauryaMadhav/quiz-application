@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+     <meta charset="UTF-8">
+     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+     <!-- Links -->
+     <link rel="stylesheet" href="style.css">
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+     <title>Quiz Application</title>
+</head>
+
+<body>
+     <div class="start_quiz">
+          <button class="start_btn">Start Quiz</button>
+     </div>
+
+     <!-- info box -->
+     <div class="info_box">
+          <div class="info_head">
+               <h3>Some instructions for this Quiz</h3>
+          </div>
+          <div class="info_body">
+               <div>
+                    1. You will get only 10 seconds to answer the questions.
+               </div>
+               <div>
+                    2. There is only one correct option
+               </div>
+               <div>
+                    3. You can't exit the tab while doing the quiz.
+               </div>
+               <div>
+                    4. You will get points on basis of correct answer.
+               </div>
+               <div>
+                    5. Only usable on tablet and above.
+               </div>
+               <div class="good_luck">
+                    Good Luck
+               </div>
+          </div>
+          <div class="info_btn">
+               <button class="quit">Exit Quiz</button>
+               <button class="continue">Continue</button>
+          </div>
+     </div>
+
+     <div class="quiz_box">
+
+          <!-- question box header -->
+          <header>
+               <div>
+                    <h4>Awesome Quiz Application</h4>
+               </div>
+               <div class="timer">
+                    <div class="timer_text">Time left</div>
+                    <div class="timer_sec">10</div>
+               </div>
+          </header>
+
+          <!-- questions and option box -->
+          <section>
+               <div class="que_text">
+                    <!-- <span>What is my name?</span> -->
+               </div>
+               <div class="option_list">
+                    <!-- <div class="option">
+                         <span>Harry Potter</span>
+                    </div>
+                    <div class="option">
+                         <span>Hermione Granger</span>
+                    </div>
+                    <div class="option">
+                         <span>Shaurya Madhav</span>
+                    </div>
+                    <div class="option">
+                         <span>Ron Weasley</span>
+                    </div> -->
+               </div>
+          </section>
+
+          <!-- quiz box footer -->
+          <footer>
+               <div class="que_count">
+                    <!-- <span>1</span>of<span>6</span>Questions -->
+               </div>
+               <div class="next_que">
+                    <button class="next_btn">Next</button>
+               </div>
+          </footer>
+     </div>
+
+     <!-- result box -->
+     <div class="result_box">
+          <div class="icon">
+               <i class="fas fa-crown"></i>
+          </div>
+          <div class="complete_quiz">You've completed the Quiz!</div>
+          <div class="score">
+               <!-- <span>You got<p>&nbsp; 2</p>&nbsp; out of &nbsp;<p>3 </p></span> -->
+          </div>
+          <div class="buttons">
+               <button class="continue">Replay Quiz</button>
+               <button class="quit">Quit</button>
+          </div>
+     </div>
+
+     <script src="js/script.js"></script>
+     <script src="js/questions.js"></script>
+</body>
+
+</html>
